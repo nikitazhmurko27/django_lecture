@@ -1,0 +1,18 @@
+[
+{
+    "model": "posts.category",
+    "pk": 1,
+    "fields": {
+        "name": "Football",
+        "is_active": true
+    }
+},
+{
+    "model": "posts.category",
+    "pk": 2,
+    "fields": {
+        "name": "Hockey",
+        "is_active": true
+    }
+}
+]

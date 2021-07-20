@@ -1,0 +1,18 @@
+{% extends "post/base.html" %}
+{% block content %}
+{% for post in posts %}
+<article class="blog-post">
+    <a href="/posts/{{post.id}}"><h2 class="blog-post-title">{{post.title}}</h2></a>
+    <p>Categories:
+        <ul>
+        {% for cat in post.categories.all %}
+            <li>{{cat.name}}</li>
+        {% endfor %}
+        </ul>
+    </p>
+    <p class="blog-post-meta">{{post.created_at}}</p>
+    <p>{{post.content}}</p>
+</article>
+<hr>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "post/base.html" %}
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    {{form.non_field.errors}}
+    <p><input type="submit"></p>
+</form>
+<!--<p style="color: red">{{error}}</p>-->
+<hr>
+{% endblock %}
